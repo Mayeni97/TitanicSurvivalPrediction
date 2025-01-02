@@ -1,0 +1,42 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*.so
+*.ipynb_checkpoints
+
+# Virtual environment
+venv/
+env/
+
+# Data files
+*.tsv
+*.xlsx
+*.json
+*.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+*.out
+*.err
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Package files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Environment settings
+.env
