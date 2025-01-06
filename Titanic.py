@@ -21,3 +21,16 @@ train_data["Embarked"] = train_data["Embarked"].fillna(train_data["Embarked"].mo
 
 print(train_data.isnull().sum())
 
+# Creating new features
+train_data['FamilySize'] = train_data['SibSp'] + train_data['Parch']
+test_data['FamilySize'] = test_data['SibSp'] + test_data['Parch']
+train_data['Sex'] = train_data['Sex'].map({'male': 0, 'female': 1})
+test_data['Sex'] = test_data['Sex'].map({'male': 0, 'female': 1})
+train_data['Embarked'] = train_data['Embarked'].map({'C': 0, 'Q': 1, 'S': 2})
+test_data['Embarked'] = test_data['Embarked'].map({'C': 0, 'Q': 1, 'S': 2})
+
+#Showing data after cleaning
+sns.barplot(x='Sex', y='Survived', data=train_data, palette=["pink", "blue"])
+plt.title("Survival Rate by Sex")
+plt.xticks(ticks= [0,1], labels= ["Females", "Males"])
+plt.show()
